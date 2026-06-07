@@ -29,7 +29,7 @@ Route::view('/home', 'welcome');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/login.proses', [LoginController::class, 'authenticate'])->name('login.proses');
+    Route::post('/proses', [LoginController::class, 'authenticate'])->name('proses');
 
     Route::get('/register', [LoginController::class, 'register'])->name('register');
     Route::post('/register-proses', [LoginController::class, 'register_proses'])->name('register.proses');

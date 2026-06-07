@@ -43,7 +43,7 @@ Route::get('home', function () {
 });
 
 // Authentication
-Route::get('/', [LoginController::class, 'index'])->name('/login')->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('/login')->middleware('guest');
 Route::post('/login-proses', [LoginController::class, 'authenticate'])->name('login-proses');
 Route::post('/logout', [LoginController::class, 'logout']);
 

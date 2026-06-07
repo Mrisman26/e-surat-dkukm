@@ -50,7 +50,7 @@
                                         </p>
                                     </div>
 
-                                    <form class="row g-3 needs-validation" action="{{ route('login-proses') }}"
+                                    <form class="row g-3 needs-validation" action="{{ route('login.proses') }}"
                                         method="post">
                                         {{ csrf_field() }}
                                         <div class="col-12">

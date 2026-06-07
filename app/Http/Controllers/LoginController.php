@@ -51,6 +51,12 @@ class LoginController extends Controller
     public function beranda()
     {
 
+            $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login');
+        }
+
         if   (Auth::user()->level == 'PEGAWAI' || Auth::user()->level == 'ADMIN') {
         $pegawai = DB::table('users')
         ->join('pegawais', 'users.email', '=', 'pegawais.email')

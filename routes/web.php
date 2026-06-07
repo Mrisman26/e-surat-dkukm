@@ -18,7 +18,7 @@ use App\Http\Controllers\SuratMasuk;
 |--------------------------------------------------------------------------
 */
 
-Route::view('/', 'login.login');
+Route::view('/', 'Login.login');
 Route::view('/home', 'welcome');
 
 /*

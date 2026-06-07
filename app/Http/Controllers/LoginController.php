@@ -31,7 +31,7 @@ class LoginController extends Controller
         {
             $request->session()->regenerate();
             pnotify()->addSuccess('Selamat Anda Berhasil Login');
-            return redirect('Dashboard');
+            return redirect('dashboard');
         }
         pnotify()->addError('Username dan Password Tidak Terdaftar');
         return back();

@@ -34,9 +34,9 @@ use App\Http\Controllers\TambahSuratMasuk;
 
 
 
-// Route::get('/', function () {
-//     return view('login.login');
-// });
+Route::get('/', function () {
+    return view('login.login');
+});
 
 Route::get('home', function () {
     return view('welcome');

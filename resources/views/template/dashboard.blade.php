@@ -2,7 +2,6 @@
 <html lang="en">
 
 {{--  Start Head  --}}
-
 <head>
     @include('template.head')
 </head>

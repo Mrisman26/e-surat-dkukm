@@ -51,7 +51,7 @@ class LoginController extends Controller
     public function beranda()
     {
 
-        if (Auth::user()->level == 'PEGAWAI' || Auth::user()->level == 'ADMIN') {
+        if   (Auth::user()->level == 'PEGAWAI' || Auth::user()->level == 'ADMIN') {
         $pegawai = DB::table('users')
         ->join('pegawais', 'users.email', '=', 'pegawais.email')
         ->select('pegawais.idbidang')

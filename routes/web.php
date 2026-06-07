@@ -34,16 +34,16 @@ use App\Http\Controllers\TambahSuratMasuk;
 
 
 
-Route::get('/', function () {
-    return view('login.login');
-});
+// Route::get('/', function () {
+//     return view('login.login');
+// });
 
 Route::get('home', function () {
     return view('welcome');
 });
 
 // Authentication
-Route::get('/login', [LoginController::class, 'index'])->name('/login')->middleware('guest');
+Route::get('/', [LoginController::class, 'index'])->name('/login')->middleware('guest');
 Route::post('/login-proses', [LoginController::class, 'authenticate'])->name('login-proses');
 Route::post('/logout', [LoginController::class, 'logout']);
 
